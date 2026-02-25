@@ -1,0 +1,93 @@
+/* กำหนดฟอนต์และพื้นหลัง */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* พื้นหลังสีเทาอ่อน สบายตา */
+    color: #333;
+}
+
+/* ส่วนหัวและเมนู */
+header {
+    background-color: #4A90E2; /* สีฟ้าสะอาดตา */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white; /* สีตัวอักษรสีขาว */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ส่วนเนื้อหา */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* รูปโปรไฟล์ */
+.profile-img {
+    width: 180px; /* ปรับขนาดความกว้างรูป */
+    height: auto; /* ให้ความสูงปรับตามอัตโนมัติ */
+    float: left; /* ทำให้รูปลอยไปทางซ้าย */
+    margin-right: 20px; /* เพิ่มช่องว่างด้านขวารูป */
+    margin-bottom: 10px; /* เพิ่มช่องว่างด้านล่างรูป */
+    border-radius: 10px; /* ทำขอบมน */
+    border: 3px solid #4A90E2;
+}
+
+/* ป้องกันไม่ให้เนื้อหาส่วนล่างไหลขึ้นมาปน */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* จัดการกล่องรวมรูปภาพ */
+.hobby-gallery {
+    display: flex; /* เรียงรูปในแนวนอน */
+    flex-wrap: wrap; /* ถ้ารูปเกินหน้าจอ ให้ขึ้นบรรทัดใหม่ */
+    gap: 20px; /* ระยะห่างระหว่างรูป */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    margin-bottom: 20px;
+}
+
+/* จัดการแต่ละรูปและคำบรรยาย */
+.hobby-item {
+    width: 200px; /* กำหนดความกว้างของแต่ละรูป */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+.hobby-item img {
+    width: 100%; /* ให้รูปกว้างเต็มกล่อง */
+    height: 150px; /* กำหนดความสูงให้เท่ากัน */
+    object-fit: cover; /* ป้องกันรูปบิดเบี้ยว */
+    border-radius: 8px; /* ทำขอบมน */
+    border: 2px solid #dddddd;
+}
+
+/* ส่วนท้าย */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    color: #f38b8b;
+    background-color: #834545;
+    margin-top: 30px;
+}
